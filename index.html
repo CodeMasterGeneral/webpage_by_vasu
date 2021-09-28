@@ -6,12 +6,222 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
-    
+    <style>
+        body {
+            margin:0;
+        }
+        #top_nav_box {
+            padding: 10px;
+            background-color: #f3a703;
+        }
+        #my_pic {
+            width: 50px;border: 1px solid black;
+        }
+        .my_name {
+            font-size: 22px;
+            color: #494b39;
+            padding: 20px;
+            vertical-align: top;border: 1px solid black;
+        }
+        #main_title{
+            color: #fff;
+            font-size: 3em;
+            border: 1px solid black;
+        }
+        #nav_main {
+            color: rgb(101, 100, 104);
+            float: right;
+            padding: 10px;
+            border: 1px solid black;
+            margin-right: 100px;
+            font-size: 2em;
+        }
+        #nav_main span{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        #nav_main span:hover{
+            color:beige;
+            cursor: pointer;
+        }
+
+        .flexContainer{
+            width: 100%;
+            height: 200px;
+            padding: 5px;
+            background-color: beige;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border: 1px solid black;
+        }
+        .colorBox{
+            width: 30%;
+            border: 1px solid black;
+            color: #fff;
+        }
+
+        #msg{
+            padding: 20px;
+            width: 100%;
+            height: auto;
+            font-size: 3em;
+            display: block;
+            background-color: #000;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+    </style>
+
+
 </head>
-<body>
-    <span>
-        <img title="vasu dev mandal" src="myPic.jpg" width="200"/>
-    </span>
-    github hosted webpage...
+<body >
+    <div id="top_nav_box">
+        <span>
+            <img id="my_pic" title="vasu dev mandal" alt="name" src="myPic.jpg" width="200"/>
+        </span>
+        <span class="my_name">Vasu Dev Mandal</span>
+        <span class="my_name">real8mandal@gmail.com</span>
+
+        <span id="main_title">Title</span>
+        
+
+        <span id="nav_main">
+            <span onclick="miniTimer()">start</span>
+            <span onclick="Stopper()">stop</span>
+            <span>link</span>
+            <span>link</span>
+        </span>
+    </div>
+    <p>github hosted webpage...</p>
+
+    <span id="msg">color change strating in &nbsp; &nbsp;<span id="miniTimer" >5</span>... </span>
+
+    <div class="flexContainer">
+        <div id="box7" class="colorBox"></div>
+        <div id="box8" class="colorBox"></div>
+        <div id="box9" class="colorBox"></div>
+    </div>
+    <div class="flexContainer">
+        <div id="box1" class="colorBox"></div>
+        <div id="box2" class="colorBox"></div>
+        <div id="box3" class="colorBox"></div>
+    </div>
+    <div class="flexContainer">
+        <div id="box4" class="colorBox"></div>
+        <div id="box5" class="colorBox"></div>
+        <div id="box6" class="colorBox"></div>
+    </div>
+    
 </body>
+<script>
+
+    miniTimer.counter=5;
+    setInterval(miniTimer,1000);
+    function miniTimer(){
+        var i = document.getElementById("miniTimer");
+            i.innerHTML = miniTimer.counter;
+            miniTimer.counter--;
+        if(miniTimer.counter == 0){
+
+            clearInterval(miniTimer);
+
+            // document.getElementById("msg").style.display = "none";
+
+            const interval = new Array (window.setInterval(A,500),
+            window.setInterval(B,500),
+            window.setInterval(C,500),
+            window.setInterval(D,500),
+            window.setInterval(E,500),
+            window.setInterval(F,500),
+            window.setInterval(G,500),
+            window.setInterval(H,500),
+            window.setInterval(I,500))
+
+            document.getElementById("msg").innerText = interval;
+        }
+    }
+    
+
+    
+    
+    A.counter = 0;
+    B.counter = 0; 
+    C.counter = 0;
+    D.counter = 0;
+    E.counter = 0; 
+    F.counter = 0;
+    G.counter = 0;
+    H.counter = 0; 
+    I.counter = 0;
+
+    function A(){
+        var el1 = document.getElementById("box1");
+        el1.style.backgroundColor = "rgb(" + (A.counter) + ',' + (0)  +',' + (0) + ")";
+                    el1.innerHTML = "rgb(" + (A.counter) + ',' + (0)  +',' + (0) + ")";
+        A.counter++;
+    }
+    function B(){
+        var el2 = document.getElementById("box2");
+        el2.style.backgroundColor = "rgb(" + (0) + ',' + (B.counter)  +',' + (0) + ")";
+                    el2.innerHTML = "rgb(" + (0) + ',' + (B.counter)  +',' + (0) + ")";
+        B.counter++;
+    }
+    function C(){
+        var el3 = document.getElementById("box3");
+        el3.style.backgroundColor = "rgb(" + (0) + ',' + (0)  +',' + (C.counter) + ")";
+                    el3.innerHTML = "rgb(" + (0) + ',' + (0)  +',' + (C.counter) + ")";
+        C.counter++;
+    }
+    function D(){
+        var el4 = document.getElementById("box4");
+        el4.style.backgroundColor = "rgb(" + (D.counter) + ',' + (D.counter)  +',' + (0) + ")";
+                    el4.innerHTML = "rgb(" + (D.counter) + ',' + (D.counter)  +',' + (0) + ")";
+        D.counter++;
+    }
+    function E(){
+        var el5 = document.getElementById("box5");
+        el5.style.backgroundColor = "rgb(" + (E.counter) + ',' + (0)  +',' + (E.counter) + ")";
+                    el5.innerHTML = "rgb(" + (E.counter) + ',' + (0)  +',' + (E.counter) + ")";
+        E.counter++;
+    }
+    function F(){
+        var el6 = document.getElementById("box6");
+        el6.style.backgroundColor = "rgb(" + (0) + ',' + (F.counter)  +',' + (F.counter) + ")";
+                    el6.innerHTML = "rgb(" + (0) + ',' + (F.counter)  +',' + (F.counter) + ")";
+        F.counter++;
+    }
+    function G(){
+        var el7 = document.getElementById("box7");
+        el7.style.backgroundColor = "rgb(" + (G.counter + Math.floor(Math.random()*100)) + ',' + (G.counter+ Math.floor(Math.random()*100))  +',' + (0) + ")";
+                    el7.innerHTML = "rgb(" + (G.counter + Math.floor(Math.random()*100)) + ',' + (G.counter+ Math.floor(Math.random()*100))  +',' + (0) + ")";
+        G.counter++;
+    }
+    function H(){
+        var el8 = document.getElementById("box8");
+        el8.style.backgroundColor = "rgb(" + (0) + ',' + (H.counter+ Math.floor(Math.random()*100))  +',' + (H.counter+ Math.floor(Math.random()*100)) + ")";
+                    el8.innerHTML = "rgb(" + (0) + ',' + (H.counter+ Math.floor(Math.random()*100))  +',' + (H.counter+ Math.floor(Math.random()*100)) + ")";
+        H.counter++;
+    }
+    function I(){
+        var el9 = document.getElementById("box9");
+        el9.style.backgroundColor = "rgb(" + (I.counter+ Math.floor(Math.random()*100)) + ',' + (I.counter+ Math.floor(Math.random()*100))  +',' + (I.counter+ Math.floor(Math.random()*100)) + ")";
+                    el9.innerHTML = "rgb(" + (I.counter+ Math.floor(Math.random()*100)) + ',' + (I.counter+ Math.floor(Math.random()*100))  +',' + (I.counter+ Math.floor(Math.random()*100)) + ")";
+        I.counter++;
+    }
+    
+   
+    function Stopper(){
+
+        var x;
+        for(i=1;i<=10;i++){
+            // clearInterval(interval[i]);
+            x = x + " "+i+" " ;
+            interval[i] = -1;
+        }document.getElementById("msg").innerText = x;
+            window.alert("stopped..");
+    }
+
+</script>
 </html>
